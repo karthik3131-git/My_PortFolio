@@ -1,0 +1,71 @@
+.work-experiance-container
+{
+    margin: 4rem 0;
+    position: relative;
+}
+.work-experiance-container h5{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+.arrow-right,.arrow-left
+{
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #51cae3;
+    border-radius: 0.65rem;
+    border: 1.5px solid #51cae3;
+    background: #130f2a;
+    position: absolute;
+    top: 55%;
+    z-index: 2;
+    cursor: pointer;
+
+}
+.arrow-left span,.arrow-right span{
+    font-size: 2rem;
+    font-weight: 500;
+
+}
+.arrow-left
+{
+    left: -0rem;
+}
+.arrow-right
+{
+    right: -0rem;
+}
+
+.scroll-target {
+    scroll-margin-top: 70px;  /* Adjust based on the height of your fixed navbar plus some extra space */
+  }
+@media(max-width:1025px)
+{
+    .arrow-left
+    {
+        left: 0rem;
+    }
+    .arrow-right
+    {
+        right: 0rem;
+    }
+}
+@media(max-width:768px)
+{
+    .work-experiance-container h5
+    {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+    .arrow-left
+    {
+        left: -0.88rem;
+    }
+    .arrow-right
+    {
+        right: -0.88rem;
+    }
+}

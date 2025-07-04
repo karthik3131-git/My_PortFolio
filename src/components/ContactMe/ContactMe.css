@@ -1,0 +1,30 @@
+.contact-container
+{
+    margin: 4rem 0;
+    position: relative;
+}
+.contact-container h5{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.contact-content
+{
+    display: flex;
+    gap: 3rem;
+}
+.scroll-target {
+    scroll-margin-top: 70px;  /* Adjust based on the height of your fixed navbar plus some extra space */
+  }
+@media(max-width:768px)
+{
+    .contact-content
+    {
+        flex-direction: column-reverse;
+    }
+    .contact-container h5 
+    {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+}
