@@ -5,7 +5,7 @@ const ContactForm = () => {
   return (
     <div className='contact-form-content'>
       <form 
-        action="https://formsubmit.co/karthik110720@gmail.com" 
+        action="https://formsubmit.co/7c59de80ce1224f459c5bfbd6c0c5055" 
         method="POST"
       >
         {/* 🔒 Optional: hidden inputs for extra behavior */}

@@ -1,24 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import MobileNav from './MobileNav/MobileNav';
-import './Navbar.css'
+import './Navbar.css';
 
 const Navbar = ({ onHeroClick, onSkillsClick, onWorkExperienceClick, onContactMeClick }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
-  }
+  };
+
   return (
     <>
-      {<MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />}
+      <MobileNav
+        isOpen={openMenu}
+        toggleMenu={toggleMenu}
+        onHeroClick={onHeroClick}
+        onSkillsClick={onSkillsClick}
+        onWorkExperienceClick={onWorkExperienceClick}
+        onContactMeClick={onContactMeClick}
+      />
+
       <nav className='nav-wrapper'>
         <div className='nav-content'>
           <ul>
             <li>
-              <a href="#home" onClick={onHeroClick}  className='menu-item'>Home</a>
+              <a href="#home" onClick={onHeroClick} className='menu-item'>Home</a>
             </li>
             <li>
-              <a href="#skills" onClick={onSkillsClick}  className='menu-item'>Skills</a>
+              <a href="#skills" onClick={onSkillsClick} className='menu-item'>Skills</a>
             </li>
             <li>
               <a href="#exp" onClick={onWorkExperienceClick} className='menu-item'>Experience</a>
@@ -26,7 +35,7 @@ const Navbar = ({ onHeroClick, onSkillsClick, onWorkExperienceClick, onContactMe
             <li>
               <a href="#contact" onClick={onContactMeClick} className='menu-item'>Contact</a>
             </li>
-            <button className='contact-btn' onClick={() => { }}>Hire me</button>
+            <button className='contact-btn'>Hire me</button>
           </ul>
           <button className="menu-btn" onClick={toggleMenu}>
             <span className="material-icons">
@@ -36,9 +45,7 @@ const Navbar = ({ onHeroClick, onSkillsClick, onWorkExperienceClick, onContactMe
         </div>
       </nav>
     </>
+  );
+};
 
-  )
-}
-
-export default Navbar
-
+export default Navbar;

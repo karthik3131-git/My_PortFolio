@@ -21,6 +21,7 @@ const App = () => {
 
   // Function to scroll to a ref
   const scrollToRef = (ref) => {
+    console.log("Scrolling to:", ref); // 🧪 Debug log
     ref.current.scrollIntoView({ behavior: 'smooth' });
   };
 

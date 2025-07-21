@@ -1,37 +1,42 @@
-import React from 'react'
-import './MobileNav.css'
+import React from 'react';
+import './MobileNav.css';
 
+const MobileNav = ({
+  isOpen,
+  toggleMenu,
+  onHeroClick,
+  onSkillsClick,
+  onWorkExperienceClick,
+  onContactMeClick
+}) => {
 
-const MobileNav = ({ isOpen, toggleMenu }) => {
-    return (
-        <>
-            <div className={`mobile-menu ${isOpen ? "active" : ""}`}
-                onClick={toggleMenu}
-            >
+  const handleClick = (callback) => {
+    callback();       // Scroll to the section
+    toggleMenu();     // Close the menu
+  };
 
-                <div className='mobile-menu-container'>
-                    <ul>
-                        <li>
-                            <a href="#home" className='menu-item'>Home</a>
-                        </li>
-                        <li>
-                            <a href="#skills" className='menu-item'>Skills</a>
-                        </li>
-                        <li>
-                            <a href="#exp" className='menu-item'>Experience</a>
-                        </li>
-                        <li>
-                            <a href="#contact" className='menu-item'>Contact</a>
-                        </li>
-                        
-                        <button className='contact-btn' onClick={() => { }}>Hire me</button>
-                        
-                    </ul>
-                </div>
-            </div>
+  return (
+    <div className={`mobile-menu ${isOpen ? 'active' : ''}`}>
+      <div className='mobile-menu-container'>
+        <ul>
+          <li>
+            <button className='menu-item' onClick={() => handleClick(onHeroClick)}>Home</button>
+          </li>
+          <li>
+            <button className='menu-item' onClick={() => handleClick(onSkillsClick)}>Skills</button>
+          </li>
+          <li>
+            <button className='menu-item' onClick={() => handleClick(onWorkExperienceClick)}>Experience</button>
+          </li>
+          <li>
+            <button className='menu-item' onClick={() => handleClick(onContactMeClick)}>Contact</button>
+          </li>
+        </ul>
+        <hr className="menu-separator" />
+<button className='hireme-btn' onClick={() => { }}>Hire me</button>
+      </div>
+    </div>
+  );
+};
 
-        </>
-    );
-}
-
-export default MobileNav
+export default MobileNav;
